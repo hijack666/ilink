@@ -1,10 +1,9 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import MainPage from './pages/mainPageComponent';
 
 function App() {
   return (
-    <Translator></Translator>
+    <MainPage/>
   );
 }
 
