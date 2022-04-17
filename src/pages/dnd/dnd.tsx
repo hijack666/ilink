@@ -1,11 +1,10 @@
+import React, { useState } from 'react';
 import { DragDropContext} from 'react-beautiful-dnd';
-import React, { useEffect, useState } from 'react';
 import Column from './column/column';
-import styled from 'styled-components';
 import CheckButton from './check/checkButton';
 
 function DndBlock(props: any) {
-    let textObjects: any = [];
+    let textObjects: any[] = [];
     props.text.split(' ').forEach((element: string, i: number) => {
         textObjects.push({
             id: String(i),
@@ -22,7 +21,7 @@ function DndBlock(props: any) {
         {
             name: "Sentence",
             items: []
-        },
+        }
     ];
 
     /** Состояние колонок со списками слов */
@@ -81,7 +80,7 @@ function DndBlock(props: any) {
     }
 
     return (
-        <div style={{marginTop: '150px'}}>
+        <>
             <DragDropContext onDragEnd={onDragEnd}>
                 <div>
                     <Column
@@ -98,7 +97,7 @@ function DndBlock(props: any) {
             </DragDropContext>
 
             <CheckButton originalText={props.text} answer={wordsList[1]}></CheckButton>
-        </div>
+        </>
     )
 }
 

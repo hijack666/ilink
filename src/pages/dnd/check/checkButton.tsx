@@ -12,6 +12,7 @@ const Checker = styled.div.attrs(props => ({
     height: 28px;
     text-align: center;
     margin-bottom: 27px;
+    text-shadow: -1px -2px 2px #FFFFFF, 1px 2px 2px rgba(91, 13, 13, 0.5);
 `
 
 const CheckBtn = styled.div`
@@ -87,7 +88,7 @@ function CheckButton(props: any) {
         <>
             { checked ?
                 <Checker color={checkCorrectness() ? '#00ff00' : '#FF0000'}>
-                    {checkCorrectness() ? 'Correct' : 'Something Wrong' }
+                    {checkCorrectness() ? 'Correct' : 'Something wrong!' }
                 </Checker> : null}
             <CheckBtn onClick={() => setCheckState(true)}>
                 {/* <Speech styles={style} text={props.originalText} textAsButton={true} displayText="Check" /> */}

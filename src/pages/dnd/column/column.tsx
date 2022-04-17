@@ -1,6 +1,6 @@
+import React from "react";
 import { Droppable} from 'react-beautiful-dnd';
 import DraggableElement from './draggable';
-import React from "react";
 import styled from "styled-components";
 
 const WordsBlock = styled.div.attrs(props => ({

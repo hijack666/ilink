@@ -3,14 +3,14 @@ export interface Sentence {
     ru: string;
 }
 
+export interface SentenceAll {
+    sentenceAll: Sentence[]
+}
+
 export interface DataSentence {
     data: {
         sentence: Sentence
     }
-}
-
-export interface SentenceAll {
-    sentenceAll: Sentence[]
 }
 
 export interface DataSentenceAll {

@@ -1,31 +1,42 @@
 import styled from 'styled-components';
 import Icon from '../../assets/icons/icon.png';
 import React from "react";
+import Cloud from '../../assets/icons/cloud.png';
 
 const OriginalTextBlock = styled.div`
-    height: 114px;
     display: flex;
+    margin-bottom: 50px;
 `;
 
 const HumanIcon = styled.div`
-    width: 185px;
+    margin-top: 15px;
 `;
 
 const TextCloud = styled.div`
-    padding: 17px 24px;
-    margin-left: 19px;
-    border: 2px solid #252525;
-    border-radius: 18px;
+    padding: 17px 24px 30px 43px;
     max-width: calc(100% - 185px);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    background-image: url(${Cloud});
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 54px;
 `;
 
 const Word = styled.span`
     margin-right: 10px;
     text-decoration: underline dotted;
     text-underline-offset: 3px;
+`
+
+const Title = styled.h1`
+    color: #252525;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+    text-shadow: -2px -4px 3px #FFFFFF, 2px 4px 3px rgba(0, 0, 0, 0.25);
+    margin-bottom: 56px;
 `
 
 export const OriginalSentence = (props: any) => {
@@ -36,10 +47,10 @@ export const OriginalSentence = (props: any) => {
 
     return (
         <>
-            <h1>Translate this sentence</h1>
+            <Title>Translate this sentence</Title>
             <OriginalTextBlock>
                 <HumanIcon>
-                    <img  src={Icon} alt="fireSpot" style={{ width: '100%' }}/>
+                    <img src={Icon} alt="fireSpot" style={{ width: '185px' }}/>
                 </HumanIcon>
                 <TextCloud>
                     {
