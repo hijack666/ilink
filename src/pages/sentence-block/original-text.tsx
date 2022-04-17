@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Icon from '../../assets/icons/icon.png';
+import React from "react";
 
 const OriginalTextBlock = styled.div`
     height: 114px;
