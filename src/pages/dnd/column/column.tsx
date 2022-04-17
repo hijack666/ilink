@@ -10,7 +10,6 @@ const WordsBlock = styled.div.attrs(props => ({
   flex-wrap: wrap;
   padding: 8px;
   height: 90px;
-  background-color: orange;
   border-top: ${props => props.border};
   border-bottom: ${props => props.border};
   margin-bottom: 15px;

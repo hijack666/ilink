@@ -12,11 +12,11 @@ const Word = styled.span`
   box-sizing: border-box;
   align-items: center;
   margin-right: 10px;
-  
   padding: 0 9px;
   font-size: 18px;
   min-width: 50px;
 `
+
 const WordBlock = styled.div`
   height: 37px;
 `
