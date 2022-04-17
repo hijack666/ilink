@@ -8,18 +8,19 @@ const WordsBlock = styled.div.attrs(props => ({
 }))`
   display: flex;
   flex-wrap: wrap;
-  padding: 10px;
+  padding: 8px;
   height: 90px;
   background-color: orange;
   border-top: ${props => props.border};
   border-bottom: ${props => props.border};
+  margin-bottom: 15px;
+  box-sizing: border-box;
 `
 
 const DroppableBlock = styled.div`
-  background-color: orange;
-  width: 400px;
-  max-height: 100px;
   margin-bottom: 15px;
+  height: 90px;
+  max-height: 90px;
 `
 
 function Column(props: any) {

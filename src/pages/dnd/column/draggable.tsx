@@ -9,13 +9,16 @@ const Word = styled.span`
   box-shadow: 0px 8px 4px -6px rgba(0, 0, 0, 0.25);
   display: flex;
   height: 30px;
+  box-sizing: border-box;
   align-items: center;
   margin-right: 10px;
-  margin-bottom: 10px;
-  padding: 0 10px;
+  
+  padding: 0 9px;
+  font-size: 18px;
+  min-width: 50px;
 `
 const WordBlock = styled.div`
-  height: 45px;
+  height: 37px;
 `
 
 function DraggableElement(props: any) {

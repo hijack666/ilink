@@ -27,7 +27,6 @@ function MainPage(props: any) {
 
     function setEnText(sentences: Sentence[]) {
         setText(() => 
-            // text = text
             text = sentences[getRandomSentence(sentences.length)]
         );
     }
@@ -36,13 +35,14 @@ function MainPage(props: any) {
         let randNumber = Math.random() * sentencesLength;
         randNumber = Math.floor(randNumber);
         return randNumber;
-    } 
+    }
+
+
 
     return (
         <Container>
             <OriginalSentence text={text.en}></OriginalSentence>
             {text.ru.length ? <DndBlock text={text.ru}></DndBlock> : null}
-            {/* <DndBlock text={text}></DndBlock> */}
         </Container>
     )
 }
