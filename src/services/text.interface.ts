@@ -8,3 +8,13 @@ export interface DataSentence {
         sentence: Sentence
     }
 }
+
+export interface SentenceAll {
+    sentenceAll: Sentence[]
+}
+
+export interface DataSentenceAll {
+    data: {
+        sentenceAll: Sentence[]
+    }
+}

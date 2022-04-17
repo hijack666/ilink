@@ -20,8 +20,8 @@ class TextService {
         const body = {
             operationName: null,
             query: `{
-                sentence:
-                    sentence {
+                sentenceAll:
+                    sentenceAll {
                         en
                         ru
                     }

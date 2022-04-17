@@ -8,7 +8,7 @@ function DndBlock(props: any) {
     props.text.split(' ').forEach((element: string, i: number) => {
         textObjects.push({
             id: String(i),
-            word: element
+            word: element.toLowerCase()
         })
     });
 

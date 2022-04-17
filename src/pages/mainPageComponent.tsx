@@ -3,8 +3,9 @@ import React from "react";
 import TextService from "../services/textService";
 // import OriginalSentence from "./sentence-block/original-text";
 import styled from 'styled-components';
-import { DataSentence, Sentence } from "../services/text.interface";
+import { DataSentence, DataSentenceAll, Sentence, SentenceAll } from "../services/text.interface";
 import DndBlock from "./dnd/dnd";
+import OriginalSentence from "./sentence-block/original-text";
 
 const Container = styled.div`
     margin: 0 auto;
@@ -14,26 +15,32 @@ const Container = styled.div`
 function MainPage(props: any) {
     let [text, setText] = useState({en: '', ru: ''});
     const textService = new TextService();
-    // let text = "YA tvoy rot truba shatal"
 
     // componentDidMount
     useEffect(() => {
         console.log('component mounted');
         textService.getTextAndTranslate()
-            .then(({data}: DataSentence) => {
-                setEnText(data.sentence);
+            .then(({data}: DataSentenceAll) => {
+                setEnText(data.sentenceAll);
             })
     }, []);
 
-    function setEnText(text: Sentence) {
+    function setEnText(sentences: Sentence[]) {
         setText(() => 
-            text = text
+            // text = text
+            text = sentences[getRandomSentence(sentences.length)]
         );
     }
 
+    function getRandomSentence(sentencesLength: number): number {
+        let randNumber = Math.random() * sentencesLength;
+        randNumber = Math.floor(randNumber);
+        return randNumber;
+    } 
+
     return (
         <Container>
-            {/* <OriginalSentence text={text.en}></OriginalSentence> */}
+            <OriginalSentence text={text.en}></OriginalSentence>
             {text.ru.length ? <DndBlock text={text.ru}></DndBlock> : null}
             {/* <DndBlock text={text}></DndBlock> */}
         </Container>

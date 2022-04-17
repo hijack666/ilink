@@ -12,11 +12,14 @@ const HumanIcon = styled.div`
 `;
 
 const TextCloud = styled.div`
-    padding: 17px 24px 17px 43px;
+    padding: 17px 24px;
+    margin-left: 19px;
     border: 2px solid #252525;
     border-radius: 18px;
     max-width: calc(100% - 185px);
-    word-break: break-word;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 `;
 
 const Word = styled.span`
