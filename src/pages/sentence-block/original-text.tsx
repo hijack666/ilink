@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import Icon from '../../assets/icons/icon.png';
 import React from "react";
-import Cloud from '../../assets/icons/cloud.png';
 
 const OriginalTextBlock = styled.div`
     display: flex;
@@ -18,7 +17,7 @@ const TextCloud = styled.div`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background-image: url(${Cloud});
+    background-image: url('../../assets/icons/cloud.png');
     background-repeat: no-repeat;
     background-size: contain;
     height: 54px;

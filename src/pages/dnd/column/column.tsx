@@ -3,17 +3,17 @@ import { Droppable} from 'react-beautiful-dnd';
 import DraggableElement from './draggable';
 import styled from "styled-components";
 
-const WordsBlock = styled.div.attrs(props => ({
-  border: props.border || "1px solid gray",
-}))`
+const WordsBlock = styled.div`
   display: flex;
   flex-wrap: wrap;
   padding: 8px;
   height: 90px;
-  border-top: ${props => props.border};
-  border-bottom: ${props => props.border};
   margin-bottom: 15px;
   box-sizing: border-box;
+  &.gray {
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+  }
 `
 
 const DroppableBlock = styled.div`
@@ -30,7 +30,7 @@ function Column(props: any) {
             {provided => (
               <DroppableBlock ref={provided.innerRef} {...provided.droppableProps}>
                 {/* <h2>{droppableId}</h2> */}
-                <WordsBlock border={droppableId=== 'Sentence' ? '1px solid gray' : 'none'}>
+                <WordsBlock className={droppableId === 'Sentence' ? 'gray' : '' }>
                   {list.map((val: any, index: any) => {
                       return (
                           <DraggableElement id={val.id} key={val.id} index={index} word={val.word} />

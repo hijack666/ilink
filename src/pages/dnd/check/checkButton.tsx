@@ -2,10 +2,7 @@ import React, { useState } from 'react';
 import Speech from 'react-speech';
 import styled from 'styled-components';
 
-const Checker = styled.div.attrs(props => ({
-    color: props.color,
-}))`
-    color: ${props => props.color};
+const Checker = styled.div`
     font-weight: 400;
     font-size: 24px;
     line-height: 28px;
@@ -13,6 +10,12 @@ const Checker = styled.div.attrs(props => ({
     text-align: center;
     margin-bottom: 27px;
     text-shadow: -1px -2px 2px #FFFFFF, 1px 2px 2px rgba(91, 13, 13, 0.5);
+    &.red {
+        color: #00ff00;
+    }
+    &.green {
+        color: #FF0000;
+    }
 `
 
 const CheckBtn = styled.div`
@@ -87,7 +90,7 @@ function CheckButton(props: any) {
     return(
         <>
             { checked ?
-                <Checker color={checkCorrectness() ? '#00ff00' : '#FF0000'}>
+                <Checker className={checkCorrectness() ? '#00ff00' : '#FF0000'}>
                     {checkCorrectness() ? 'Correct' : 'Something wrong!' }
                 </Checker> : null}
             <CheckBtn onClick={() => setCheckState(true)}>
