@@ -82,18 +82,16 @@ function DndBlock(props: any) {
     return (
         <>
             <DragDropContext onDragEnd={onDragEnd}>
-                <div>
-                    <Column
-                        droppableId="Sentence"
-                        list={wordsList[1].items}
-                        type="TRANSLATE"
-                    />
-                    <Column
-                        droppableId="Words"
-                        list={wordsList[0].items}
-                        type="TRANSLATE"
-                    />
-                </div>
+                <Column
+                    droppableId="Sentence"
+                    list={wordsList[1].items}
+                    type="TRANSLATE"
+                />
+                <Column
+                    droppableId="Words"
+                    list={wordsList[0].items}
+                    type="TRANSLATE"
+                />
             </DragDropContext>
 
             <CheckButton originalText={props.text} answer={wordsList[1]}></CheckButton>

@@ -17,16 +17,10 @@ function MainPage() {
 
     // componentDidMount
     useEffect(() => {
-        function fetchBusinesses() {
-            textService.getTextAndTranslate()
+        textService.getTextAndTranslate()
             .then(({data}: DataSentenceAll) => {
                 setEnText(data.sentenceAll);
-            })
-            .catch(err => {
-                console.log(err)
             });
-        }
-        fetchBusinesses()
     }, []);
 
     /** Назначить предложение для перевода */
@@ -45,7 +39,7 @@ function MainPage() {
 
     return (
         <Container>
-            <OriginalSentence text={text.en}></OriginalSentence>
+            {text.ru.length ? <OriginalSentence text={text.en}></OriginalSentence> : null}
             {text.ru.length ? <DndBlock text={text.ru}></DndBlock> : null}
         </Container>
     )
