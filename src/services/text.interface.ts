@@ -1,20 +1,20 @@
-export interface Sentence {
+export interface ISentence {
     en: string;
     ru: string;
 }
 
-export interface SentenceAll {
-    sentenceAll: Sentence[]
+export interface ISentenceAll {
+    sentenceAll: ISentence[]
 }
 
-export interface DataSentence {
+export interface IDataSentence {
     data: {
-        sentence: Sentence
+        sentence: ISentence
     }
 }
 
-export interface DataSentenceAll {
+export interface IDataSentenceAll {
     data: {
-        sentenceAll: Sentence[]
+        sentenceAll: ISentence[]
     }
 }

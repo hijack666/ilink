@@ -1,7 +1,7 @@
+import React from "react";
 import styled from 'styled-components';
 import Icon from '../../assets/icons/icon.png';
-import React from "react";
-import Cloud from '../../assets/icons/cloud.png';
+import Cloud from '../../assets/icons/cloud1.svg';
 
 const OriginalTextBlock = styled.div`
     display: flex;
@@ -18,7 +18,6 @@ const TextCloud = styled.div`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background-image: url(${Cloud});
     background-repeat: no-repeat;
     background-size: contain;
     height: 54px;
@@ -52,7 +51,7 @@ export const OriginalSentence = (props: any) => {
                 <HumanIcon>
                     <img src={Icon} alt="fireSpot" style={{ width: '185px' }}/>
                 </HumanIcon>
-                <TextCloud>
+                <TextCloud style={{backgroundImage:`url(${Cloud})`}}>
                     {
                         props.text ? props.text.split(' ').map((word: string, i: number) =>
                             <ListItem key={i} value={word}></ListItem>

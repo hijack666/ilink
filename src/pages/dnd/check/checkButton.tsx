@@ -68,7 +68,6 @@ function CheckButton(props: any) {
                 </Checker> : null}
             <CheckBtn onClick={() => { speakButtonHandler(checkCorrectness() ? props.originalText : ''); setCheckState(true)}}>Check</CheckBtn>
         </>
-        
     )
 }
 

@@ -6,6 +6,8 @@
       "dom.iterable",
       "esnext"
     ],
+    "outDir": "./dist",
+    "noImplicitAny": true,
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -13,15 +15,14 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
+    "module": "es6",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "preserve",
+    "jsx": "react",
     "downlevelIteration": false
   },
   "include": [
-    "src"
+    "./src/**/*",
   ]
 }

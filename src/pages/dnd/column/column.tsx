@@ -29,7 +29,6 @@ function Column(props: any) {
         <Droppable droppableId={droppableId} type={type} direction="horizontal">
             {provided => (
               <DroppableBlock ref={provided.innerRef} {...provided.droppableProps}>
-                {/* <h2>{droppableId}</h2> */}
                 <WordsBlock className={droppableId === 'Sentence' ? 'gray' : '' }>
                   {list.map((val: any, index: any) => {
                       return (

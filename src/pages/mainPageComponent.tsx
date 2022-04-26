@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import TextService from "../services/textService";
 import styled from 'styled-components';
-import { DataSentenceAll, Sentence } from "../services/text.interface";
+import { IDataSentenceAll, ISentence } from "../services/text.interface";
 import DndBlock from "./dnd/dnd";
 import OriginalSentence from "./sentence-block/original-text";
 
@@ -18,13 +18,13 @@ function MainPage() {
     // componentDidMount
     useEffect(() => {
         textService.getTextAndTranslate()
-            .then(({data}: DataSentenceAll) => {
+            .then(({data}: IDataSentenceAll) => {
                 setEnText(data.sentenceAll);
             });
     }, []);
 
     /** Назначить предложение для перевода */
-    function setEnText(sentences: Sentence[]) {
+    function setEnText(sentences: ISentence[]) {
         setText(() => 
             text = sentences[getRandomSentence(sentences.length)]
         );
